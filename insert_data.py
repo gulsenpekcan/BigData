@@ -37,7 +37,7 @@ def insert_data(data_list):
 if __name__ == '__main__':
 
     data_list = []
-    for _ in range(10000000):
+    for _ in range(1000000):
         val1 = rand_data_generator()
         val2 = rand_data_generator()
         val3 = rand_data_generator()
