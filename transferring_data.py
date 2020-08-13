@@ -17,13 +17,13 @@ def rand_data_generator(size=6, chars=string.ascii_letters + string.digits):
 def generate_and_insert_data():
     commands = (
         """
-        CREATE TABLE data_table (
+        CREATE TABLE transferred_data2 (
             id serial PRIMARY KEY,
             data VARCHAR(255) NOT NULL
         )
         """)
 
-    sql = "INSERT INTO data_table (data) VALUES (%s)"
+    sql = "INSERT INTO transferred_data2 (data) VALUES (%s)"
     data_list = []
 
     conn = None
@@ -31,24 +31,24 @@ def generate_and_insert_data():
         conn = psycopg2.connect(database=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST, port=DB_PORT)
         print("Database connected successfully")
 
-        '''cur = conn.cursor()
+        cur = conn.cursor()
         # create table one by one
         cur.execute(commands)
 
         cur.close()
         # commit the changes
         conn.commit()
-        print("Table(s) created successfully")'''
+        print("Table(s) created successfully")
 
-        cur = conn.cursor()
+        '''cur = conn.cursor()
 
-        for _ in range(1000000):
+        for _ in range(100000):
             rand_data = rand_data_generator()
             cur.execute(sql, (rand_data,))
 
         # commit the changes to the database
         conn.commit()
-        print("Data inserted successfully")
+        print("Data inserted successfully")'''
         # close communication with the PostgreSQL database server
         cur.close()
 
