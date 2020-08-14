@@ -32,3 +32,5 @@ df.write.jdbc('jdbc:postgresql://localhost:5432/project1', 'public.transferred_d
 print("Execution time: %f" % (time.time() - start))
 
 # Execution time: 23.322607
+
+# Execution time: 31.997026

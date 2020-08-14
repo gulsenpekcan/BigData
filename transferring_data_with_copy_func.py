@@ -1,7 +1,6 @@
 
 import psycopg2
 import time
-import sys
 
 DB_NAME = "project1"
 DB_USER = "postgres"
@@ -50,3 +49,4 @@ cur.close()
 
 # Execution time: 5.367825
 
+# Execution time: 4.819338
