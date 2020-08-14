@@ -47,6 +47,4 @@ conn.commit()'''
 
 cur.close()
 
-# Execution time: 5.367825
-
 # Execution time: 4.819338
